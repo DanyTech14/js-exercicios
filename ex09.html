@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head><meta charset="UTF-8"><title>Exercício 9 - Palíndromo</title>
+<style>body{font-family:Arial;max-width:800px;margin:40px auto;padding:20px} .enunciado{background:#f2f7fc;padding:12px;border-left:4px solid #5b9bd5} button{background:#e67e22;color:#fff;border:0;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:16px} pre{background:#1e1e2e;color:#e6edf3;padding:12px;border-radius:6px;white-space:pre-wrap}</style>
+</head><body>
+<h1>Exercício 9</h1>
+<p class="enunciado">Receber números via prompt e determinar se é palíndromo.</p>
+<button id="btn">▶ Executar</button>
+<pre id="saida"></pre>
+<p><a href="index.html">← Voltar</a></p>
+<script>
+document.getElementById('btn').onclick=()=>{
+  let t=(prompt("Número ex: 121:")||"").trim();
+  if(!t) return;
+  let inv=t.split('').reverse().join('');
+  let msg=t===inv ? t+" é palíndromo! (invertido = "+inv+")" : t+" NÃO é palíndromo. (invertido = "+inv+")";
+  document.getElementById('saida').textContent=msg;
+  alert(msg);
+};
+</script></body></html>

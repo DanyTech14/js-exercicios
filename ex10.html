@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head><meta charset="UTF-8"><title>Exercício 10 - Vogais sublinhadas</title>
+<style>body{font-family:Arial;max-width:800px;margin:40px auto;padding:20px} .enunciado{background:#f2f7fc;padding:12px;border-left:4px solid #5b9bd5} button{background:#e67e22;color:#fff;border:0;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:16px} .resultado{font-size:28px;background:#fff;border:1px solid #ddd;padding:12px;border-radius:6px;margin-top:12px}</style>
+</head><body>
+<h1>Exercício 10</h1>
+<p class="enunciado">Receber um nome, contar vogais e sublinhar as vogais. Ex: Miguel Manuel</p>
+<button id="btn">▶ Executar</button>
+<div id="saida" class="resultado"></div>
+<p><a href="index.html">← Voltar</a></p>
+<script>
+document.getElementById('btn').onclick=()=>{
+  const vogais="aeiouáéíóúAEIOUÁÉÍÓÚ";
+  let nome=prompt("Nome completo:");
+  if(!nome) return;
+  let cont=0, html="";
+  for(let letra of nome){
+    if(vogais.includes(letra)){ cont++; html+=`<u>${letra}</u>`; }
+    else html+=letra;
+  }
+  document.getElementById('saida').innerHTML=`<b>${nome}</b><br>Vogais: <b>${cont}</b><br>${html}`;
+};
+</script></body></html>

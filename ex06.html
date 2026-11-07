@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head><meta charset="UTF-8"><title>Exercício 6 - FizzBuzz</title>
+<style>body{font-family:Arial;max-width:800px;margin:40px auto;padding:20px} .enunciado{background:#f2f7fc;padding:12px;border-left:4px solid #5b9bd5} button{background:#e67e22;color:#fff;border:0;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:16px} .saida{background:#1e1e2e;color:#e6edf3;padding:12px;border-radius:6px;white-space:pre-wrap;max-height:400px;overflow:auto}</style>
+</head><body>
+<h1>Exercício 6</h1>
+<p class="enunciado">Mostrar 1 a 100: múltiplos de 3 = Fizz, de 5 = Buzz, de ambos = FizzBuzz.</p>
+<button id="btn">▶ Executar</button>
+<pre id="saida" class="saida"></pre>
+<p><a href="index.html">← Voltar</a></p>
+<script>
+document.getElementById('btn').onclick=()=>{
+  let r=[];
+  for(let i=1;i<=100;i++){
+    if(i%3===0 && i%5===0) r.push("FizzBuzz");
+    else if(i%3===0) r.push("Fizz");
+    else if(i%5===0) r.push("Buzz");
+    else r.push(i);
+  }
+  document.getElementById('saida').textContent=r.join(", ");
+};
+</script></body></html>

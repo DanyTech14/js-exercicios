@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head><meta charset="UTF-8"><title>Exercício 13 - Inverter texto</title>
+<style>body{font-family:Arial;max-width:800px;margin:40px auto;padding:20px} .enunciado{background:#f2f7fc;padding:12px;border-left:4px solid #5b9bd5} button{background:#e67e22;color:#fff;border:0;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:16px} pre{background:#1e1e2e;color:#e6edf3;padding:12px;border-radius:6px;white-space:pre-wrap}</style>
+</head><body>
+<h1>Exercício 13</h1>
+<p class="enunciado">Texto invertido. Ex: Luís → siuL (código mantém acento: síuL).</p>
+<button id="btn">▶ Executar</button>
+<pre id="saida"></pre>
+<p><a href="index.html">← Voltar</a></p>
+<script>
+document.getElementById('btn').onclick=()=>{
+  let texto=prompt("Texto ex: Luís:");
+  if(texto===null) return;
+  let msg="Invertido: "+texto.split('').reverse().join('');
+  document.getElementById('saida').textContent=msg;
+  alert(msg);
+};
+</script></body></html>
